@@ -48,10 +48,7 @@
           }
       }
 
-      public function doubleSalary($salary)
-      {
-         return $this->salary*=2;
-      }
+
   }
     $user1 = new Employee;
     $user1->name = 'Толя';
@@ -65,7 +62,7 @@
 
     $user1->setAge(12);
     echo $user1->getAge() . '<br>';
-    echo $user1->doubleSalary() . '<br>';
+
     ?>
 
 
