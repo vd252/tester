@@ -25,7 +25,7 @@
     $user1->age = 34;
     $user1->salary = 3700;
 
-    echo 'Hello GIT'. '<br>';
+
     echo $user1->getName() . '<br>';
     echo $user1->getAge() . '<br>';
     echo $user1->getSalary() . '<br>';
