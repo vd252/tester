@@ -48,6 +48,16 @@
           }
       }
 
+      public function isAgeCorrect($age)
+      {
+          if ($age >= 18 and $age <=60)
+          {
+              return true;
+          } else {
+              return false;
+          }
+      }
+
 
   }
     $user1 = new Employee;
