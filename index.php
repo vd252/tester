@@ -12,8 +12,7 @@
 
       public function setAge($age)
       {
-          $num = $age;
-          if ($num > 18)
+          if ($this->isAgeCorrect($age))
           {
               $this->age = $age;
           }
@@ -56,7 +55,14 @@
           } else {
               return false;
           }
+          }
+          public function subAge($years)
+      {
+          $newage = $this->age - $years ;
+          $this->age = $newage;
+
       }
+
 
 
   }
@@ -70,7 +76,7 @@
     echo $user1->getAge() . '<br>';
     echo $user1->getSalary() . '<br>';
 
-    $user1->setAge(12);
+    $user1->subAge(6);
     echo $user1->getAge() . '<br>';
 
     ?>
