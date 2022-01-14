@@ -1,66 +1,27 @@
 ﻿<?php
   require_once 'User.php';
-class Employee
-  {
-      private $name;
-      private $age;
-      private $salary;
+class City
+{
+    public $name;
+    public $population;
 
-      public function __construct($name, $age, $salary)
-      {
-          $this->name = $name;
-          $this->age = $age;
-          $this->salary = $salary;
-      }
+    public function __construct($name, $population)
+    {
+        $this->name = $name;
+        $this->population = $population;
+    }
+}
+    $citys = [new City('Moscow', 9000000), new City('St.Pitersberg', 7000000), new City('Rostow', 3000000)];
 
-      public function setName($name)
-      {
-          $this->name = $name;
-      }
+    foreach ($citys as $city)
+    {
+        echo $city->name . ' ' . $city->population;
+        echo '<br>';
+    }
 
-      public function getName()
-      {
-          return $this->name;
-      }
-
-      public function setAge($age)
-      {
-          if ($this->isAgeCorrect($age)) {
-              $this->age = $age;
-          }
-      }
-
-      public function getAge()
-      {
-          return $this->age;
-      }
-
-      public function setSalary($salary)
-      {
-          $this->name = $salary;
-      }
-
-      public function getSalary()
-      {
-          return $this->salary . '$';
-      }
-
-      private function isAgeCorrect($age)
-      {
-          return $age >=18 and $age <= 60;
-      }
-
-  }
-    $user1 = new Employee('Eric',23, 100);
-
-
-
-
-    echo $user1->getName() . '<br>';
-    echo $user1->getAge() . '<br>';
-    echo $user1->getSalary() . '<br>';
-
-
+    echo '<pre>';
+    print_r($citys);
+    echo '</pre>';
 
     ?>
 
